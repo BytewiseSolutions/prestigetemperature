@@ -65,3 +65,6 @@ git remote add origin https://github.com/BytewiseSolutions/prestigetemperature.g
 git remote -v
 git add .
 git commit -m "Initial commit for Prestige Temperature website"
+git branch
+git push -u origin master
+git push -u origin main
