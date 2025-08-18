@@ -1,0 +1,81 @@
+.services {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 3rem 1rem;
+    font-family: 'Poppins', sans-serif;
+
+    .services-container {
+        max-width: 970px;
+        margin: 0 auto;
+        text-align: center;
+
+        h1 {
+            color: var(--title-color);
+            font-size: 2.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: .8rem;
+            text-align: left;
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+
+            .first-content,
+            .second-content {
+                padding: .8rem;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                    margin-bottom: 1rem;
+                }
+
+                h2,
+                h3 {
+                    color: var(--title-color);
+                    margin: 1rem 0;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.6;
+                    margin-bottom: 1rem;
+                }
+
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    margin-bottom: 1rem;
+
+                    li {
+                        margin-bottom: 0.8rem;
+                        position: relative;
+                        padding-left: 1.2rem;
+
+                        &::before {
+                            content: "\f105";
+                            font-family: "Font Awesome 6 Free";
+                            font-weight: 900;
+                            color: var(--highlight-color);
+                            position: absolute;
+                            left: 0;
+                            top: 2px;
+                            font-size: .8rem;
+                        }
+
+                        p {
+                            margin: 0;
+                            line-height: 1.4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

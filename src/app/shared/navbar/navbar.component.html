@@ -1,0 +1,45 @@
+<div class="top-header">
+    <span><i class="fas fa-clock"></i> We are open every day 7 AM to 5 PM</span>
+    <span>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:info@prestigetemperature.co.za">info&#64;prestigetemperature.co.za</a>
+    </span>
+    <span>
+        <i class="fas fa-phone"></i>
+        <a href="tel:+27105160950">+27 105160950</a>
+    </span>
+</div>
+
+<nav class="navbar" [ngClass]="{ 'scrolled': !headerVisible }">
+    <div class="logo">
+        <img src="assets/images/logo.webp" alt="Prestige Temperature">
+    </div>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                (click)="closeMenu()">Services</a></li>
+        <li><a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                (click)="closeMenu()">About</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                (click)="closeMenu()">Contact</a></li>
+
+        <div class="contact-info">
+            <span>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@prestigetemperature.co.za">info&#64;prestigetemperature.co.za</a>
+            </span>
+            <span>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+27105160950">+27 105160950</a>
+            </span>
+        </div>
+    </ul>
+
+    <div class="hamburger" (click)="toggleMenu()">
+        <i *ngIf="!menuOpen" class="fas fa-bars"></i>
+        <i *ngIf="menuOpen" class="fas fa-times"></i>
+    </div>
+
+</nav>

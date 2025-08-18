@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+ :root {
+     --background-color: #050a0f;
+     --title-color: #c77d1e;
+     --highlight-color: #f2d400;
+     --border-color: #f8df0c;
+     --text-color: #ffffff;
+     --overlay-color: rgba(0, 0, 0, 0.5);
+ }

@@ -1,3 +1,29 @@
 import { Routes } from '@angular/router';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { Service1DetailsComponent } from './pages/service-details/service1-details/service1-details.component';
+import { Service2DetailsComponent } from './pages/service-details/service2-details/service2-details.component';
+import { Service3DetailsComponent } from './pages/service-details/service3-details/service3-details.component';
+import { Service4DetailsComponent } from './pages/service-details/service4-details/service4-details.component';
+import { Service5DetailsComponent } from './pages/service-details/service5-details/service5-details.component';
+import { Service6DetailsComponent } from './pages/service-details/service6-details/service6-details.component';
+import { Service7DetailsComponent } from './pages/service-details/service7-details/service7-details.component';
+import { Service8DetailsComponent } from './pages/service-details/service8-details/service8-details.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'services', component: ServicesComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'services/1', component: Service1DetailsComponent },
+  { path: 'services/2', component: Service2DetailsComponent },
+  { path: 'services/3', component: Service3DetailsComponent },
+  { path: 'services/4', component: Service4DetailsComponent },
+  { path: 'services/5', component: Service5DetailsComponent },
+  { path: 'services/6', component: Service6DetailsComponent },
+  { path: 'services/7', component: Service7DetailsComponent },
+  { path: 'services/8', component: Service8DetailsComponent },
+  { path: '**', redirectTo: '' } 
+];
