@@ -9,10 +9,10 @@
                 commercial needs.
             </p>
             <button>
-                <a href="/profile.pdf" download style="color: inherit; text-decoration: none;">PROFILE</a>
+                <a href="assets/docs/profile.pdf" target="_blank" style="color: inherit; text-decoration: none;">
+                    PROFILE
+                </a>
             </button>
-
-
         </div>
     </div>
 
@@ -26,12 +26,10 @@
 
     </div>
 </section>
-
 <div class="image-modal" [class.show]="modalOpen" (click)="closeModal()">
     <span class="close-btn" (click)="closeModal()">&times;</span>
     <img [src]="modalImage" alt="Preview">
 </div>
-
 <section class="services-preview">
     <div class="services-wrapper">
         <div class="services-grid">
@@ -43,10 +41,9 @@
                 </button>
             </div>
         </div>
-
         <button class="download-btn">
-            <a href="/profile.pdf" download style="color: inherit; text-decoration: none;">
-                <i class="fas fa-download"></i> DOWNLOAD COMPANY PROFILE
+            <a href="assets/docs/profile.pdf" target="_blank" style="color: inherit; text-decoration: none;">
+                <i class="fas fa-download"></i> VIEW COMPANY PROFILE
             </a>
         </button>
     </div>

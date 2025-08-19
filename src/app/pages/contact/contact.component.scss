@@ -74,6 +74,18 @@
                     }
                 }
 
+                .status-message {
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    color: #fff;
+                    background-color: #28a745;
+                }
+
+                .status-message.ng-error {
+                    background-color: #dc3545;
+                }
+
                 form {
                     display: flex;
                     flex-direction: column;
