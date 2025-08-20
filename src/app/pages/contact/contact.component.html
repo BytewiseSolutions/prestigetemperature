@@ -36,32 +36,40 @@
             <div class="contact-col">
                 <p class="status-message" *ngIf="messageStatus">{{ messageStatus }}</p>
 
-                <form #contactForm="ngForm" (ngSubmit)="sendEmail($event)">
+                <form #contactForm="ngForm" #contactFormElement novalidate (ngSubmit)="sendEmail(contactForm)">
                     <div class="form-group">
-                        <input type="text" name="user_name" [(ngModel)]="user_name" placeholder="Your Name" required>
+                        <input type="text" name="user_name" [(ngModel)]="user_name" placeholder="Your Name" required
+                            #userName="ngModel">
+                        <div class="error" *ngIf="userName.invalid && userName.touched">Name is required.</div>
                     </div>
 
                     <div class="form-group">
-                        <input type="tel" name="user_phone" [(ngModel)]="user_phone" placeholder="Phone Number"
-                            required>
+                        <input type="tel" name="user_phone" [(ngModel)]="user_phone" placeholder="Phone Number" required
+                            #userPhone="ngModel">
+                        <div class="error" *ngIf="userPhone.invalid && userPhone.touched">Phone number is required.
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <input type="email" name="user_email" [(ngModel)]="user_email" placeholder="Your Email"
-                            required>
+                        <input type="email" name="user_email" [(ngModel)]="user_email" placeholder="Your Email" required
+                            email #userEmail="ngModel">
+                        <div class="error" *ngIf="userEmail.invalid && userEmail.touched">Enter a valid email address.
+                        </div>
                     </div>
 
                     <div class="form-group">
                         <input type="text" name="user_address" [(ngModel)]="user_address" placeholder="Your Address"
-                            required>
+                            required #userAddress="ngModel">
+                        <div class="error" *ngIf="userAddress.invalid && userAddress.touched">Address is required.</div>
                     </div>
 
                     <div class="form-group">
-                        <textarea name="message" [(ngModel)]="message" rows="5" placeholder="Message" required>
-                           </textarea>
+                        <textarea name="message" [(ngModel)]="message" rows="5" placeholder="Message" required
+                            #userMessage="ngModel"></textarea>
+                        <div class="error" *ngIf="userMessage.invalid && userMessage.touched">Message is required.</div>
                     </div>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" [disabled]="contactForm.invalid">Submit</button>
                 </form>
             </div>
         </div>
