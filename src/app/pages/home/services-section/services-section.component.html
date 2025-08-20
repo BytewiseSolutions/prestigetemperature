@@ -1,0 +1,18 @@
+<section class="services-preview">
+    <div class="services-wrapper">
+        <div class="services-grid">
+            <div class="service-card" *ngFor="let service of services">
+                <img [src]="service.image" [alt]="service.title" [routerLink]="['/services', service.id]" />
+                <p>{{ service.title }}</p>
+                <button class="learn-btn" [routerLink]="['/services', service.id]">
+                    LEARN MORE
+                </button>
+            </div>
+        </div>
+        <button class="download-btn">
+            <a href="assets/docs/profile.pdf" target="_blank" style="color: inherit; text-decoration: none;">
+                <i class="fas fa-download"></i> VIEW COMPANY PROFILE
+            </a>
+        </button>
+    </div>
+</section>

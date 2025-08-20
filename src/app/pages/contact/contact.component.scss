@@ -52,10 +52,11 @@
                         font-size: 1rem;
                         margin-bottom: 1rem;
                         color: var(--text-color);
+                        gap: 0.5rem;
 
                         i {
                             color: var(--highlight-color);
-                            margin-right: 0.8rem;
+                            margin-right: 0.3rem;
                             min-width: 25px;
                             text-align: center;
                             font-size: 1.2rem;
@@ -134,4 +135,27 @@
             }
         }
     }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        margin-top: 70px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .contact-row {
+            flex-direction: column;
+
+            .contact-col {
+                margin-bottom: 2rem;
+
+                .map {
+                    height: 200px;
+                }
+            }
+        }
+    }
+    
 }

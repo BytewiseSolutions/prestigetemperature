@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -17,6 +17,24 @@ export class NavbarComponent {
  menuOpen = false;
   headerVisible = true;
   lastScrollTop = 0;
+
+  constructor(private elRef: ElementRef) { }
+  
+ ngAfterViewInit(): void {
+  const hamburger = this.elRef.nativeElement.querySelector('.hamburger');
+  const navLinks  = this.elRef.nativeElement.querySelector('.nav-links');
+  const hero      = document.querySelector('.hero') as HTMLElement;
+
+  if (!hamburger || !navLinks || !hero) {
+    return;
+  }
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('close');
+    hero.style.marginTop = navLinks.classList.contains('open') ? '60px' : '0';
+  });
+}
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;

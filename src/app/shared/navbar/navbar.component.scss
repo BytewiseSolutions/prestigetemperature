@@ -105,6 +105,8 @@
     .top-header {
         padding: 0.5rem 1rem;
         justify-content: center;
+        width: 100%;
+        display: none;
 
         span:not(:first-child) {
             display: none;
@@ -113,20 +115,25 @@
 
     .navbar {
         position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            justify-content: space-between;
-            background-image: none;
-            background-color: white;
-            z-index: 1000;
-        
-            .hamburger {
-                display: flex;
-                font-size: 1.5rem;
-                cursor: pointer;
-                z-index: 1001;
-                color: #191919;
+        top: 0;
+        left: 0;
+        width: 100%;
+        justify-content: space-between;
+        background-image: none;
+        background-color: white;
+        padding: 0.5rem 1rem;
+        z-index: 1000;
+
+        .logo img {
+            height: 35px;
+        }
+        .hamburger {
+            display: flex;
+            font-size: 1.4rem;
+            cursor: pointer;
+            margin-right: 20px;
+            z-index: 1001;
+            color: #191919;
         }
 
 
@@ -137,10 +144,10 @@
             position: fixed;
             top: 0;
             right: -100%;
-            width: 70%;
+            width: 75%;
             height: 100vh;
             padding: 1.5rem 1rem;
-            padding-top: 60px;
+            padding-top: 50px;
             box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
             gap: 2rem;
             transition: right 0.3s ease-in-out;

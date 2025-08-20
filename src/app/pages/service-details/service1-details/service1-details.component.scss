@@ -22,7 +22,7 @@
             text-align: left;
 
             @media (max-width: 768px) {
-                grid-template-columns: 1fr;
+                display: block;
             }
 
             .first-content,
@@ -84,7 +84,6 @@
                     }
                 }
             }
-
             .first-content img,
             .second-content img {
                 width: 400px;
@@ -92,6 +91,32 @@
                 display: block;
                 margin: 0 auto 1rem;
                 border-radius: 8px;
+            }
+
+            @media (max-width: 768px) {
+                .first-content img,
+                .second-content img {
+                    width: 100%;
+                    height: auto; 
+                    max-width: 100%; 
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        display: block;
+
+        .first-content,
+        .second-content {
+            margin-bottom: 2rem;
+            text-align: center;
+
+            img {
+                width: 100%;
+                height: auto;
             }
         }
     }

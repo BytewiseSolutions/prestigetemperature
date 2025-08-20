@@ -15,3 +15,9 @@ body {
      --text-color: #ffffff;
      --overlay-color: rgba(0, 0, 0, 0.5);
  }
+
+ @media (max-width: 768px) {
+     .services {
+         margin-top: 70px;
+     }
+ }

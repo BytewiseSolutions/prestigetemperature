@@ -6,14 +6,20 @@
     </span>
     <span>
         <i class="fas fa-phone"></i>
-        <a href="tel:+27105160950">+27 105160950</a>
+        <a href="tel:+27105160950">+27 105160950</a> /
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/27833747585" target="_blank" rel="noopener noreferrer">+27 83 374
+            7585</a>
     </span>
 </div>
 
 <nav class="navbar" [ngClass]="{ 'scrolled': !headerVisible }">
     <div class="logo">
-        <img src="assets/images/logo.webp" alt="Prestige Temperature">
+        <a routerLink="/" (click)="closeMenu()">
+            <img src="assets/images/logo.webp" alt="Prestige Temperature">
+        </a>
     </div>
+
 
     <ul class="nav-links" [class.open]="menuOpen">
         <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
@@ -33,6 +39,10 @@
             <span>
                 <i class="fas fa-phone"></i>
                 <a href="tel:+27105160950">+27 105160950</a>
+            </span>
+            <span>
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/27833747585" target="_blank" rel="noopener noreferrer">+27833747585</a>
             </span>
         </div>
     </ul>

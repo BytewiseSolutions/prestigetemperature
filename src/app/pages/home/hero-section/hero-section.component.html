@@ -1,0 +1,33 @@
+<section class="hero">
+    <div class="hero-left">
+        <div class="hero-content">
+            <h1>PRESTIGE TEMPERATURE (PTY) LTD</h1>
+            <h2>Welcome to Prestige Temperature!</h2>
+            <p>
+                We specialize in providing top-notch air conditioning and refrigeration solutions for both residential
+                and
+                commercial needs.
+            </p>
+            <button>
+                <a href="assets/docs/profile.pdf" target="_blank" style="color: inherit; text-decoration: none;">
+                    PROFILE
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <div class="slider">
+            <img src="/assets/images/service1.webp" alt="Slide 1" class="active"
+                (click)="openModal('/assets/images/service1.webp')" />
+            <img src="/assets/images/service2.webp" alt="Slide 2" (click)="openModal('/assets/images/service2.webp')" />
+            <img src="/assets/images/service3.webp" alt="Slide 3" (click)="openModal('/assets/images/service3.webp')" />
+        </div>
+
+    </div>
+</section>
+
+<div class="image-modal" [class.show]="modalOpen" (click)="closeModal()">
+    <span class="close-btn" (click)="closeModal()">&times;</span>
+    <img [src]="modalImage" alt="Preview">
+</div>
